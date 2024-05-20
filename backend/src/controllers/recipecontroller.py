@@ -15,7 +15,7 @@ class RecipeController(Controller):
         # load existing recipes
         self.recipes = self.load_recipes()
 
-    def load_recipes(self) -> list[dict]:
+    def load_recipes(self) -> 'list[dict]':
         """Read all available recipes from the src/static/recipes/ directory and puts them in an array. The items of this array follow the same format as the JSON files in the directory.
 
         returns:
@@ -68,7 +68,7 @@ class RecipeController(Controller):
             return readiness
         return None
 
-    def get_readiness_of_recipes(self, recipes: list[dict], diet: Diet) -> dict:
+    def get_readiness_of_recipes(self, recipes: 'list[dict]', diet: Diet) -> dict:
         """Calculate the readiness of each recipe by the available items.
 
         parameters:
